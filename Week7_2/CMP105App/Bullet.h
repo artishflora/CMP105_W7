@@ -9,5 +9,4 @@ public:
 	~Bullet();
 
 	void update(float dt);
-
 };

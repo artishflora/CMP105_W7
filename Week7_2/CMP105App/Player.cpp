@@ -4,6 +4,8 @@ Player::Player()
 {
 	setPosition(200, 200);
 	setSize(sf::Vector2f(100, 100));
+	posx = 0;
+	posy = 0;
 }
 
 
@@ -16,16 +18,14 @@ void Player::handleInput(float dt)
 	if (input->isKeyDown(sf::Keyboard::Space))
 	{
 		input->setKeyUp(sf::Keyboard::Space);
-		int x = rand() % 600;
-		int y = rand() % 400;
-		setPosition((float)x, (float)y);
+		posx = rand() % 600;
+		posy = rand() % 400;
+		setPosition((float)posx, (float)posy);
 	}
 
 	if (input->isKeyDown(sf::Keyboard::Enter))
 	{
 		input->setKeyUp(sf::Keyboard::Enter);
-		int x = rand() % 600;
-		int y = rand() % 400;
-		bullet.setPosition((float)x, (float)y);
+		bullet.setPosition((float)posx, (float)posy);
 	}
 }

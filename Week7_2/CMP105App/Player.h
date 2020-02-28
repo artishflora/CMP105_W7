@@ -14,6 +14,8 @@ public:
 		return &bullet;
 	};
 
-private
+private:
 	Bullet bullet;
+	int posx;
+	int posy;
 };
