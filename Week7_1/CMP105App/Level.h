@@ -5,7 +5,7 @@
 #include <string>
 #include <iostream>
 #include "Player.h"
-
+#include "Enemy.h"
 
 class Level{
 public:
